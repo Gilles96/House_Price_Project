@@ -1,2 +1,3 @@
 # House_Price_Project
-Our main repository
+in this branch -> removing the part we don't need and designing the frontEnd to meet our needs
+
