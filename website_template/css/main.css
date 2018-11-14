@@ -181,7 +181,7 @@ a:hover {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('../images/banner.jpg');
+    background-image: url('../images/OnthologyBackground.jpg');
 }
 
 .banner .gradient {
@@ -247,6 +247,7 @@ a:hover {
     left: 13%;
     right: 13%;
     justify-content: center;
+    padding-bottom: 0px;
 }
 
 .about .inner-contant {
@@ -268,11 +269,18 @@ a:hover {
     font-size: 32px;
     line-height: 2;}
 
-.about .text-block p {
+.about .text-block #firstText {
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.about .text-block #secondText {
     color: white;
     letter-spacing: 0.5px;
     line-height: 26px;
-    font-size: 13px;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.85);
 }
 
@@ -290,10 +298,23 @@ a:hover {
     transition: all 0.3s;
 }
 
-.about .item:hover img {
+.about .leImage:hover img {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+.about .laImage img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.about .laImage{
+    padding-top: 25px;
+}
+
+.about .conteneur{
+    height:1000px;
 }
 
 /*== Technologies Section Start ==*/
@@ -462,13 +483,13 @@ a:hover {
     font-size: 37px;
     font-weight: 700;
     padding-bottom: 12px;
-    color: #b7b7b7;
+    color: black;
     text-transform: capitalize;
 }
 
 .services h4 {
     font-size: 18px;
-    color: #b7b7b7;
+    color: black;
     letter-spacing: 3px;
     padding-bottom: 70px;
     text-transform: uppercase;
@@ -608,11 +629,6 @@ a:hover {
 
 .team h3 a {
     color: white;
-}
-
-#blog h3 a {
-    color: black;
-    text-shadow: 0.5px 0.5px #d5d5d5;
 }
 
 .team p a {
@@ -1140,15 +1156,78 @@ Photography CSS stylesheet
 /*========================================================================================*/
 
 /* ----------------
-Blog Section
+Examples Section
 ---------------- */
 
-/*== Team ==*/
+/*== Table ==*/
 
-#blog .container-fluid {
-    padding: 0
+#Examples h3 {
+    color: black;
+    font-size: 25px;
+    text-align: left;
+    line-height: 28px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-transform: uppercase;
 }
 
+#Examples p a {
+    font-size: 13px;
+    text-align: left;
+    
+}
+
+#Examples img {
+    max-width: 100%;
+
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#Examples table{
+    padding: 30px;
+    width: flex;
+}
+
+#Examples table, th, td{
+    border: 3px solid black;
+    padding: 10px;
+}
+#Examples tr:hover{
+    background-color: #6699ff;
+}
+#Examples .text-block {
+    
+    height: 150px;
+    left: 13%;
+    right: 13%;
+    justify-content: center;
+    padding-bottom: 0px;
+}
+
+#Examples .inner-contant {
+    padding-left: 53px;
+    padding-top: 0;
+}
+#Examples .text-block span {
+    color: #ff0000;
+    font-size: 32px;
+    line-height: 2;}
+
+#Examples .text-block p {
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.85);
+}
+#Examples .container-fluid{
+    position: flex;
+}
+.firstTable{
+    outline: rgb(O,O,O);
+}
 #blog .row {
     margin: 0;
     padding-bottom: 50px;
@@ -1188,26 +1267,6 @@ Blog Section
     letter-spacing: 3px;
     padding-bottom: 70px;
     text-transform: uppercase;
-}
-
-#blog h3 {
-    font-size: 16px;
-    text-align: left;
-    line-height: 28px;
-    font-weight: 600;
-    padding-bottom: 25px;
-    text-transform: uppercase;
-}
-
-#blog p a {
-    font-size: 13px;
-    text-align: left;
-    color: #b70082;
-}
-
-#blog .inner-part img {
-    width: 100%;
-    margin-bottom: 30px;
 }
 
 #blog img {
@@ -1259,7 +1318,6 @@ Blog Section
 #blog .bt {
     padding-top: 80px;
 }
-
 /*========================================================================================*/
 
 /* ----------------
@@ -1653,7 +1711,7 @@ Blog-page
 
 #services h4 {
     font-size: 16px;
-    color: #464646;
+    color: black;
 }
 
 #services p {
@@ -1670,16 +1728,6 @@ Blog-page
 
 #services .heading {
     padding-bottom: 30px;
-}
-.table{
-    padding: 30px;
-}
-.table table, th, td{
-    border: 3px solid black;
-    padding: 10px;
-}
-.tableContent td,tr:hover{
-    background-color: #6699ff;
 }
 
 
@@ -1919,7 +1967,7 @@ Blog-page
     #about-us {
         padding-top: 50px;
     }
-    #blog h6 {
+    #w h6 {
         font-size: 14px;
         letter-spacing: 1px;
     }
@@ -2013,8 +2061,8 @@ Blog-page
             margin-right: 15px;
         }
         .about .text-block {
-            padding-left: 0;
-            padding-right: 0;
+            padding-left: 10;
+            padding-right: 10;
         }
         .about .text-block {
             bottom: 98%;
