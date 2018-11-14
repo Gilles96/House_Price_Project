@@ -24,15 +24,15 @@
     color: #fff;
     position: relative;
     text-transform: uppercase;
-    background-position: top;
+    background-position: middle;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('images/banner.jpg');
+    background-image: url('images/OnthologyBackground.jpg');
 }
 .banner  h1 {
     text-align: left;
 }
-footer {background-image: url("images/banner-customers.jpg");background-repeat: no-repeat;background-size: cover;background-position: top;}
+/*footer {background-image: url("images/OnthologyBackground.jpg");background-repeat: no-repeat;background-size: cover;background-position: top;}*/
 </style>
           
           <!-- Google Font and font-awesome -->
@@ -87,7 +87,7 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
     <div class="container">
        <div class="row">
            <div class="col-md-12">
-                <h1 data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800">Read our blog</h1>
+                <h1 data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800">SPARQL QUERY EXAMPLES</h1>
            </div>
        </div>
     </div>
@@ -96,17 +96,22 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
 
 <!-- support section Start--> 
 <section id="Examples">
+
   <div class="container-fluid">
+    <div class="text-block">
+    <span>Onthology </span>
+    <div class="inner-contant">
+      <p>Those are example queries that you can copy and paste in the SPARQL Endpoint</p>
+    </div>
+  </div>
     <h3>Explore Links Between Variables</h3>
-    <div class='FirstTable'>
-    <table>
+    <table class="FirstTable">
       <caption>Explore Links Between Variables</caption>
       <tr>
         <th>#</th>
         <th>Questions</th>
         <th>SPARQL</th>
       </tr>
-      <div class="tableContent">
       <tr>
         <td>G1.1</td>
         <td>What are the variables which are linked to a certain variable V1?</td>
@@ -250,38 +255,35 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
                     }   
         </td>
       </tr>
-      </div>
     </table>
-    </div>
     <br>
     <br>
     
-    <h3>Explore Links Between Variable and Measure</h3>
-    <div class="SecondTable">
-      <table>
-       <caption>Explore Links Between Variable and Measure</caption>
-       <tr>
-         <th>#</th>
-         <th>Questions</th>
-         <th>SPARQL</th>
-       </tr>
-       <div>
-       <tr>
-         <td>G2.1</td>
-         <td>Which dataset contains the measure for a certain variables?</td>
-         <td>SELECT DISTINCT  ?variable ?measure ?dataset <br>
+    <div class="LinkVarMeas">
+      <h3>Explore Links Between Variable and Measure</h3>
+      <table class="SecondTable">
+        <caption>Explore Links Between Variable and Measure</caption>
+        <tr>
+          <th>#</th>
+          <th>Questions</th>
+          <th>SPARQL</th>
+        </tr>
+        <tr>
+          <td>G2.1</td>
+          <td>Which dataset contains the measure for a certain variables?</td>
+          <td>SELECT DISTINCT  ?variable ?measure ?dataset <br>
                WHERE { ?variable rdf:type analytics:Variable.<br>
                        ?variable analytics:measuredBy ?measure.<br>
                        ?dataStructure analytics:containMeasure ?measure.<br>
                        ?dataset qb:structure ?dataStructure.<br>
                        ?dataset rdf:type  qb:Dataset.
                      }
-         </td>
-       </tr>
-       <tr>
-         <td>G2.2</td>
-         <td>What is the reference (person/paper) which created a certain dataset?</td>
-         <td>SELECT DISTINCT  ?dataset ?paperTitle ?firstName ?lastName<br>
+          </td>
+        </tr>
+        <tr>
+          <td>G2.2</td>
+          <td>What is the reference (person/paper) which created a certain dataset?</td>
+          <td>SELECT DISTINCT  ?dataset ?paperTitle ?firstName ?lastName<br>
                WHERE { ?dataset rdf:type  analytics:Dataset.<br>
                        ?variable analytics:origin ?origin.   <br>
                        ?origin analytics:referenceOfOrigin ?ref.<br>
@@ -303,15 +305,14 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
                      }
          </td>
        </tr>
-       </div>
      </table>
     </div>
-  <br>
-  <br>
+    <br>
+    <br>
 
-   <h3>Explore Concepts</h3>
-    <div class="SecondTable">
-      <table>
+    <div class="ExploreConcepts">
+      <h3>Explore Concepts</h3>
+      <table class="ThirdTable">
        <caption>Explore Concepts</caption>
        <tr>
          <th>#</th>
@@ -341,27 +342,26 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
          </td>
        </tr>
        <tr>
-         <td>G3.3</td>
-         <td>Which reference has created a certain variable as the metric for concept C1?<br>
+          <td>G3.3</td>
+          <td>Which reference has created a certain variable as the metric for concept C1?<br>
              What are the possibilities for links between two variables?</td>
-         <td>SELECT DISTINCT ?concept ?variable ?paperTitle<br>
-  WHERE { ?var rdf:type  analytics:Variable.<br>
-          ?var rdfs:label ?variable.<br>
-          ?var analytics:operationalize ?concept.  <br>
-          ?var analytics:origin ?origin.   <br>
-          ?origin analytics:referenceOfOrigin ?ref.<br>
-          ?ref rdf:type fabio:ResearchPaper.<br>
-          ?ref frbr:realization ?expression.<br>
-          ?expression dcterms:title ?paperTitle.
-}
-         </td>
-       </tr>
-       </div>
-     </table>
-    </div>
-  <br>
-  <br>  
-</div>
+          <td>SELECT DISTINCT ?concept ?variable ?paperTitle<br>
+    WHERE { ?var rdf:type  analytics:Variable.<br>
+            ?var rdfs:label ?variable.<br>
+            ?var analytics:operationalize ?concept.  <br>
+            ?var analytics:origin ?origin.   <br>
+            ?origin analytics:referenceOfOrigin ?ref.<br>
+            ?ref rdf:type fabio:ResearchPaper.<br>
+            ?ref frbr:realization ?expression.<br>
+            ?expression dcterms:title ?paperTitle.  
+          }
+          </td>
+        </tr>
+      </div>
+    </table>
+    <br>
+    <br>  
+  </div>
 </section>
 <!-- support section Ended -->
 
