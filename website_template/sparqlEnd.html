@@ -16,6 +16,7 @@
           <link href="css/animate.css" rel="stylesheet">
           <link href="css/viewbox.css" rel="stylesheet">
           <link href="css/main.css" rel="stylesheet">
+          
 <style>
 .banner {
     display: flex;
@@ -38,6 +39,8 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
           <!-- Google Font and font-awesome -->
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
           <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,300,400,400i,500,500i,600,700,900" rel="stylesheet">
+          <link rel="icon"  type="image/png" href="images/favicon.png">
+          <link href="yasgui.min.css" rel="stylesheet" type="text/css" />
                 
           <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
           <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -95,61 +98,12 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
 <!-- Jumbotron Ended-->
 
 <!-- Support section Start -->
-<div id="contact">
-  <div class="container">
-   <div class="col-md-12 text-left" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
-       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining </p>
-       <p>essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p ldus PageMaker including versions of Lorem Ipsum.</p>
-   </div>
-     <div class="container py-5">
-      <div class="row">
-          <div class="col-md-12">
-              <form>
-                  <div class="form-group row" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
-                      <div class="col-sm-4">
-                          <input type="text" class="form-control" placeholder="Your Name" required>
-                      </div>
-                          <div class="col-sm-4">
-                          <input type="text" class="form-control" placeholder="Your Email id" required>
-                      </div>
-                      <div class="col-sm-4">
-                          <input type="text" class="form-control" placeholder="Your Website" required>
-                      </div>
-                  </div>
-                  <div class="form-group row" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
-                      <div class="col-xs-12 col-md-8"  data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
-                         <select required>
-                           <option value="none">None</option>
-                           <option value="web design">Web Design</option>
-                           <option value="psd to html">Psd to html</option>
-                           <option value="web hosting">Web hosting</option>
-                           <option value="website template">website template</option>
-                           <option value="" selected disabled hidden>What Type of Service your are looking for?</option>
-                         </select>
-                      </div>
-                      <div class="col-xs-12 col-md-4">
-                         <select required>
-                           <option value="0">0</option>
-                           <option value="1l">1L</option>
-                           <option value="2ls">2Ls</option>
-                           <option value="3ls">3Ls</option>
-                           <option value="4ls">4Ls</option>
-                           <option value="" selected disabled hidden>Your Budget</option>
-                         </select>
-                      </div>
-                  </div>
-                  <div class="form-group row" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
-                      <div class="col-xs-12 col-md-12">
-                          <textarea type="text" class="form-control" placeholder="Extra Message" rows="8" required></textarea>
-                      </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary px-4" data-aos="zoom-in" data-aos-duration="1000">Alright, Get the Free Quote</button>
-              </form>
-          </div>
-      </div>
-     </div>
-  </div>
-</div>
+
+  <div id='showcase'></div>
+  <script src="yasgui.bundled.min.js"></script>
+  <script type="text/javascript">
+    var yasgui = YASGUI(document.getElementById("showcase"));
+  </script>
 <!-- Support section Ended -->
 
 <!-- Footer section Start -->
@@ -159,11 +113,9 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
        <div class="row" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
            <ul>
                <li><a href="index.html">Home </a></li><li class="semicolon">|</li>
-               <li><a href="services.html">our services</a></li><li class="semicolon">|</li>
-               <li><a href="portfolio.html">portfolio</a></li><li class="semicolon">|</li>
-               <li><a href="blog_single.html">Read Blog</a></li><li class="semicolon">|</li>
-               <li><a href="support.html">contact</a></li><li class="semicolon">|</li>
-               <li><a href="support.html">support</a></li>
+               <li><a href="sparqlEx.html">SPARQL Examples</a></li><li class="semicolon">|</li>
+               <li><a href="sparqlEnd.html">SPARQL EndPoint</a></li><li class="semicolon">|</li>
+               <li><a href="about.html">About Us</a></li>
            </ul>
            <p>(C) 2017 All rights reserved <span><a href="https://www.template.net/editable/websites/html5" target="_blank" style="color: #b9b203;">ostacor.</a></span>Designed by <span><a href="https://www.template.net/editable/websites/html5" target="_blank" style="color: #03b9b3;">template.net</a></span></p>
        </div>
