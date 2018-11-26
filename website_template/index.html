@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
          
-          <title>ANO</title>
+          <title>UNSW</title>
           <!-- bootstrap -->
           <link href="css/bootstrap.min.css" rel="stylesheet">
           <!-- Custom CSS: custom Styles -->
@@ -44,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="images/UNSW_LOGO.png" alt="logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <!-- Nav links -->
@@ -68,7 +68,7 @@
   <div class="gradient"></div>
         <div class="row">
             <div class="col-md-12">
-                <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">Analytics Knowledge Ontology</h1>
+                <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">Research Variable Ontology</h1>
                 <p data-aos="fade-down" data-aos-easing="linear" data-aos-duration="600">CSE, UNSW</p>
                 <!--
                 <p><a href="#" target="_blank" class="btn btn-primary" role="button" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200">get a quote</a>
@@ -81,30 +81,106 @@
 
 <!-- About SEction Start -->
 <section class="about">
-        
+  
           <div class="item">
-            <div class="conteneur">
-              <!--<img src="images/400x300Grey.jpg" alt="about" style="width:100%;">-->
+            <div class="leImage">
+              <img src="images/image-1.jpg" alt="Nature" style="width:100%;">
               <div class="text-block">
-                <span>Onthology Definition</span>
+                <span>Introduction </span>
                 <div class="inner-contant">
-                  <p id="firstText">"In computer science and information science, an ontology encompasses a representation, formal naming, and definition of the categories, properties, and relations between the concepts, data, and entities that substantiate one, many, or all domains." - Wikipedia</p>
-                  <div class=laImage>
-                    <img src="images/TheOntologyCloud.jpg" style="width: 100%">
-                  </div>
+                  <p id="firstText">
+                    RVO, Research Variable Ontology, proposes a schema enterprise can use to record their data analytics experiments and use as a knowledgebase for learning and recommendation support. RVO is designed around the research variables, which form the basis of the hypothesis that analysts test through building a model. RVO can answer an array of questions raised by data analysts when they start designing a solution and provide recommendations and alternatives. All facts or expert knowledge recorded in RVO are traceable to its origin (i.e. a person, publication, validated model). RVO follows best practices in ontology design and reuse existing data models and vocabularies (such as DBPedia1, RDF-Cube2, FABIO3) to facilitate efficient reuse in real world applications by using semantic technologies and open standards (RDF, OWL, SPARQL).
+                  </p>
+                  <p id="secondText">
+                    The purpose of RVO is to:
+                    <ul class="bullet">
+                      <li>Establish a common terminology for the organization to represent classes and properties in the empirical analytics domain, relating to existing taxonomies, ontologies and data standards.
+                      </li>
+                      <li>Capture established (even if contradictory) complex analytics knowledge in a particular domain and its origin. The knowledge may include known relationships between different variables, how a variable is linked to in a particular model, what are the relationships between variable and data sets, what are the relationships between variables and analytics models.
+                      </li>
+                      <li>Integrate existing ontologies to enrich the knowledge base in an organization when conducting . These ontologies can be domain-specific ontologies, ontologies representing concepts, people, standards and etc. This integration provides the knowledge base across an organization.
+                      </li>
+                      <li>Assist data analytics process stages such as variable selection, data source selection, dataset selection and evaluation.
+                      </li>
+                    </ul>  
+                  </p>
+                  
+                
                 </div>
               </div>
             </div>
           </div>
-  
+
           <div class="item">
             <div class="leImage">
               <img src="images/image-2.jpg" alt="Nature" style="width:100%;">
+
               <div class="text-block">
-                <span>Onthology </span>
-                <div class="inner-contant">
-                <p id="secondText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the since the 1500s, when an unknown printer took a galley...</p>
-                </div>
+                <p id="thirdText">
+                      The components of the ontology are shown in figure 2. Main classes of the ontology are Variable,  Measure, Model, LinkedVariables and Origin. LinkedVariables class captures a link between any two variables. LinkType is defined to represent details of different links between variables as an extendable catalogue of link types (Causal, InvestigativeCausal, NoLink). Origin class is defined to represent details about the origin or reference to any concept. Main origin types in RVO are: ViaModel, ViaLiterature, and FromExperts.
+                      One strength of this ontology is how it can be linked with any domain specific ontology via the operationalized relationship. We can take any concept (thing or property) defined in any third-party ontology as rvo:Concept and link it to a variable. In this way, the context of the variable is readily available through a domain specific ontology.
+                </p>
+                <object class="lepdf" type="application/pdf" data="Materials/rvo_v1-5.pdf?#zoom=85&scrollbar=0&toolbar=0&navpanes=0">
+                <p>Insert your error message here, if the PDF cannot be displayed.</p>
+              </object>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="leImage">
+              <img src="images/image-3.jpg" alt="Nature" style="width:100%;">
+
+              <div class="text-block">
+                <table class="lesdefs">
+                  <tr>
+                    <th>Key Concepts</th>
+                    <th>Definition</th>
+                  </tr>
+                  <tr>
+                    <td>Concept</td>
+                    <td>Concept or Thing refer to abstraction of any entity which may exist in an ontology.</td>
+                  </tr>
+                  <tr>
+                    <td>Variable</td>
+                    <td>Variables exist as metrics to quantify concepts.</td>
+                  </tr>
+                  <tr>
+                    <td>Measure</td>
+                    <td>Measures are the metrics that represent actual values for a variables.</td>
+                  </tr>
+                  <tr>
+                    <td>Variable Link</td>
+                    <td>A link describes a connection between two variables, the nature of this connection and how this connection was established.</td>
+                  </tr>
+                  <tr>
+                    <td>Origin</td>
+                    <td>Origin is where a concept (e.g. variable, Variable Link, Measure) is first defined or mentioned. RVO has three origins – Expert Person, Reference of a publication, Analytics Model</td>
+                  </tr>
+                  <tr>
+                    <td>Link Type</td>
+                    <td>Link Type describes the type of link that exists between two or more variables. <br>
+                        Example of Link Types are:
+                        <ul>
+                          <li>Causal: a variable causes another variable.</li>
+                          <li>Investigative Causal: there is a hypothesis that one variable cause another, the hypothesis needs to be tested.</li>
+                          <li>No link: there are instances that no link can be established between two variables.</li>
+                        </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Data Source</td>
+                    <td>Data source references to the source from which a data is coming from.</td>
+                  </tr>
+                   <tr>
+                    <td>Dataset</td>
+                    <td>Dataset refers to the data file provided by a data source which contain the data for one or multiple measures. We recommend publishing dataset following RDF-Cube structure.</td>
+                  </tr>
+              <tr>
+                <td>Data Structure</td>
+                <td>Dataset structure refers to the meta data for a dataset such as what measures are captured, unit of measure.</td>
+              </tr>
+                </table>
               </div>
             </div>
           </div>
@@ -156,18 +232,14 @@
 <footer>
     <!-- container Start-->
     <div class="container">
-       <div class="row" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
-           <ul>
-               <li><a href="index.html">Home </a></li><li class="semicolon">|</li>
-               <li><a href="sparqlEx.html">SPARQL Examples</a></li><li class="semicolon">|</li>
-               <li><a href="sparqlEnd.html">SPARQL EndPoint</a></li><li class="semicolon">|</li>
-               <li><a href="about.html">About Us</a></li>
-           </ul>
-           <p>(C) 2017 All rights reserved <span><a href="https://www.template.net/editable/websites/html5" target="_blank" style="color: #b9b203;">ostacor.</a></span>Designed by <span><a href="https://www.template.net/editable/websites/html5" target="_blank" style="color: #03b9b3;">template.net</a></span></p>
-       </div>
-       <div class="footer-logo">
-              <a href="index.html"><img src="images/logo.png" alt="footer-logo"></a>
-       </div>
+      <div class="row" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+        <ul>
+              <li><a href="index.html">Home </a></li><li class="semicolon">|</li>
+              <li><a href="sparqlEx.html">SPARQL Examples</a></li><li class="semicolon">|</li>
+              <li><a href="sparqlEnd.html">SPARQL EndPoint</a></li><li class="semicolon">|</li>
+              <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
     </div>
     <!-- container Ended-->
 </footer>
