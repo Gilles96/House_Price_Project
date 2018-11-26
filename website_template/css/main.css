@@ -141,6 +141,8 @@ a:hover {
 
 .navbar-brand > img {
     padding: 7px 0;
+    width: 120px;
+    height: 120px;
 }
 
 .navbar li {
@@ -242,8 +244,8 @@ a:hover {
 
 .about .text-block {
     position: absolute;
-    bottom: 89%;
     height: 0;
+    bottom: 97%;
     left: 13%;
     right: 13%;
     justify-content: center;
@@ -267,22 +269,83 @@ a:hover {
 .about .text-block span {
     color: #ff0000;
     font-size: 32px;
-    line-height: 2;}
+    line-height: 2;
+}
 
 .about .text-block #firstText {
     letter-spacing: 0.5px;
-    line-height: 26px;
-    font-size: 25px;
-    color: rgba(0, 0, 0, 0.85);
-}
-
-.about .text-block #secondText {
-    color: white;
-    letter-spacing: 0.5px;
-    line-height: 26px;
-    font-size: 20px;
+    text-align: justify;
+    line-height: 28px;
+    font-size: 24px;
     color: rgba(255, 255, 255, 0.85);
 }
+
+.about .text-block #secondText{
+    padding-top: 20px;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.85);
+}
+.about .text-block #thirdText{
+    text-align: left;
+    padding-left: 53px;
+    padding-top: 20px;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.85);
+}
+.about .bullet {
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.85);
+}
+.about .bullet li{
+    padding-top: 15px;
+    margin-left: 25px;
+    text-indent: -19px;
+}
+.bullet li:before {
+    content:"• ";
+    font-weight: 500;
+    font-size: 32px;
+    color: #ff0000;
+}
+.about .lepdf{
+    position: absolute;
+    right: 1%;
+    padding-top: 20px;
+    width: 870px;
+    height: 500px;
+}
+.about .lesdefs{
+    color: black;
+    font-weight: 500;
+    background-color: #595E65;
+}
+.about .lesdefs li:before{
+    content:"• ";
+    font-weight: 500;
+    font-size: 20px;
+    color: #ff0000;
+}
+
+.about th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+.about th ,.about td{
+    border: 3px solid #80848A;
+    padding: 10px;
+}
+.about .lesdefs tr:hover {background-color: #ddd;}
+
 
 .about .item {
     position: relative;
@@ -311,10 +374,6 @@ a:hover {
 
 .about .laImage{
     padding-top: 25px;
-}
-
-.about .conteneur{
-    height:1000px;
 }
 
 /*== Technologies Section Start ==*/
@@ -476,7 +535,19 @@ a:hover {
 
 .services {
     text-align: center;
-    padding-top: 77px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.services .TeamLink {
+    text-align: left;
+    left: 3%;
+    padding-left: 15px;
+}
+
+.TeamLink a{
+    font-size: 16px;
+    padding-left: 5px;
 }
 
 .services h3 {
@@ -521,7 +592,8 @@ a:hover {
     width: 100%;
     opacity: 0;
     transition: .3s ease;
-    background-color: rgba(0, 255, 255, 0.76);
+    background-color: rgba(242, 212, 64, 0.76);
+    white-space: nowrap;
 }
 
 .thumbnail:hover .overlay {
@@ -559,23 +631,42 @@ a:hover {
     height: 50px;
 }
 
-.overlay span {
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 5px;
+.overlay h2 {
+    font-size: 20px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-weight: 500;
+    position:absolute;
+    top: 35%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -50%);
+    display: block;
+    color: #4A73A8;
+    letter-spacing: 1px;
+
+}
+.overlay span {
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    position:relative;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -50%);
 }
 
-.thumbnail .icon {
-    color: white;
-    font-size: 20px;
+.overlay p {
+    font-size: 14px;
+    font-weight: 400;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -7%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-    text-transform: uppercase;
 }
 
 .fa-search:hover {
@@ -1013,7 +1104,7 @@ footer p {
 .thumbnail {
     position: relative;
     width: 100%;
-    height: 300px;
+    height:290px;
     overflow: hidden;
     border: none;
     border-radius: 0;
@@ -1040,7 +1131,7 @@ footer p {
     max-width: none;
 }
 
-a.thumbnail:hover {
+.thumbnail:hover {
     border-color: #17c4c6;
 }
 
@@ -1160,7 +1251,40 @@ Examples Section
 ---------------- */
 
 /*== Table ==*/
+#Examples .lesPrefix {
+    padding-left: 15px;
+    border: 1px solid #c2c2c2;
+}
+#Examples .social-buttons{
+    border: 1px solid #c2c2c2;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
+#Examples .social-buttonz {
+    border: none;
+    
+}
+#Examples .inner-text1 h3{
+    padding-top: 5px;
+    letter-spacing: 0.5px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 25px;
+    text-align: left;
+    line-height: 28px;
+    font-weight: 600;
+    text-transform: none;
+}
+#Examples .inner-text span:first-child {
+    color: pink;
+    font-weight: 600;
+}
+
+#Examples .inner-text span:last-child {
+    color: yellow;
+    font-weight: 500;
+    border-bottom: 1px solid gray;
+}
 #Examples h3 {
     color: black;
     font-size: 25px;
@@ -1186,6 +1310,14 @@ Examples Section
     transition: all 0.3s;
 }
 
+#examples th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
 #Examples table{
     padding: 30px;
     width: flex;
@@ -1198,25 +1330,34 @@ Examples Section
 #Examples tr:hover{
     background-color: #6699ff;
 }
-#Examples .text-block {
-    
-    height: 150px;
-    left: 13%;
-    right: 13%;
-    justify-content: center;
+
+}
+#Examples .text-block1 {
     padding-bottom: 0px;
+    padding-left: 43px;
+}
+#Examples .text-block2  {
+    padding-top: 20px;
+    letter-spacing: 0.5px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 25px;
+    text-align: left;
+    line-height: 28px;
+    font-weight: 600;
 }
 
-#Examples .inner-contant {
+#Examples .inner-contante {
     padding-left: 53px;
     padding-top: 0;
 }
-#Examples .text-block span {
+#Examples .text-block1 span {
     color: #ff0000;
-    font-size: 32px;
-    line-height: 2;}
+    font-size: 36px;
+    line-height: 2;
+    font-weight: 600;
+}
 
-#Examples .text-block p {
+#Examples .text-block1 p {
     letter-spacing: 0.5px;
     line-height: 26px;
     font-size: 25px;
@@ -1224,27 +1365,26 @@ Examples Section
 }
 #Examples .container-fluid{
     position: flex;
-}
-.firstTable{
-    outline: rgb(O,O,O);
-}
-#blog .row {
-    margin: 0;
-    padding-bottom: 50px;
+    background-color: white;
+    padding-top: 15px;
+    border: 0.5px solid #ddd;
 }
 
-#blog .col-md-3 {
+#Examples .row {
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#Examples .col-md-3 {
     padding: 0;
 }
 
-#blog {
+#Examples {
     width: 100%;
-    color: black;
-    padding-top: 68px;
-    padding-bottom: 71px;
 }
 
-#blog h4 {
+#Examples h4 {
     font-size: 37px;
     font-weight: 700;
     padding-bottom: 15px;
@@ -1252,7 +1392,7 @@ Examples Section
     text-transform: capitalize;
 }
 
-#blog h5 {
+#Examples h5 {
     font-size: 13px;
     line-height: 24px;
     letter-spacing: 0.5px;
@@ -1261,7 +1401,7 @@ Examples Section
     text-transform: capitalize;
 }
 
-#blog h6 {
+#Examples h6 {
     font-size: 18px;
     text-align: center;
     letter-spacing: 3px;
@@ -1269,55 +1409,15 @@ Examples Section
     text-transform: uppercase;
 }
 
-#blog img {
+#Examples img {
     width: 100%;
     margin-bottom: 30px;
 }
 
-#blog .inner-contant {
-    padding: 0 30px;
-}
-
-#blog .bt ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-#blog .bt ul li {
-    background: #252525;
-    display: inline-flex;
-}
-
-#blog .bt ul li a {
-    width: 37px;
-    height: 37px;
-    color: white;
-    margin: 0 auto;
-    font-size: 16px;
-    padding: 8px 0;
-    text-decoration: none;
-    font-family: 'Hammersmith One', sans-serif;
-}
-
-#blog a {
+#Examples a {
     text-decoration: none;
 }
 
-#blog .bt .active {
-    background-color: #b70082;
-    color: white;
-}
-
-#blog .bt a:hover {
-    background-color: #b70082;
-    color: white;
-}
-
-#blog .bt {
-    padding-top: 80px;
-}
 /*========================================================================================*/
 
 /* ----------------
@@ -1512,7 +1612,6 @@ Blog-page
 }
 
 .social-buttons {
-    border: 1px solid #c2c2c2;
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -2024,9 +2123,6 @@ Blog-page
             letter-spacing: 0px;
             padding-bottom: 50px;
         }
-        .services {
-            padding-top: 50px;
-        }
         .services h4 {
             font-size: 14px;
             letter-spacing: 1px;
@@ -2051,7 +2147,7 @@ Blog-page
             font-size: 10px;
             margin: 0 0 0 12px;
         }
-        about .text-block a {
+        .about .text-block a {
             font-size: 18px;
         }
         .about i {
