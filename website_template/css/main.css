@@ -1318,21 +1318,19 @@ Examples Section
     color: white;
 }
 
-
 #Examples table{
     padding: 30px;
     width: flex;
-    color: black;
-    font-weight: 500;
-    background-color: #595E65;
 }
 
 #Examples table, th, td{
-    border: 3px solid #80848A;
+    border: 3px solid black;
     padding: 10px;
 }
 #Examples tr:hover{
-    background-color: #ddd;
+    background-color: #6699ff;
+}
+
 }
 #Examples .text-block1 {
     padding-bottom: 0px;
