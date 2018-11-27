@@ -1328,6 +1328,7 @@ Examples Section
 #Examples table{
     padding: 30px;
     width: flex;
+    font-size: 14px;
 }
 
 #Examples table, th, td{
@@ -1338,7 +1339,7 @@ Examples Section
     background-color: #6699ff;
 }
 #Examples .text-block1 {
-    padding-bottom: 0px;
+    padding-bottom: 25px;
     padding-left: 43px;
 }
 #Examples .text-block2  {
