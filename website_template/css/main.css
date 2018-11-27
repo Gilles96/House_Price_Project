@@ -1277,9 +1277,11 @@ Examples Section
     color: rgba(0, 0, 0, 0.85);
     font-size: 25px;
     text-align: left;
-    line-height: 28px;
+    line-height: 16px;
     font-weight: 600;
     text-transform: none;
+    font-size: 14px;
+
 }
 #Examples .inner-text span:first-child {
     color: pink;
