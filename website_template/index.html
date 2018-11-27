@@ -20,6 +20,9 @@
           <!-- Google Font and font-awesome -->
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
           <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,300,400,400i,500,500i,600,700,900" rel="stylesheet">
+
+          <!-- Tab Icon-->
+          <link rel="icon"  type="image/png" href="Materials/RVO_logo.png">
                 
           <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
           <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,7 +59,6 @@
                    <li><a href="sparqlEnd.html">SPARQL EndPoint</a></li>
                    <li class="hidden-xs">|</li>
                    <li><a href="about.html">About us</a></li>
-                   <li class="hidden-xs">|</li>
                 </ul>
             </div>
         </div>
@@ -84,7 +86,7 @@
   
           <div class="item">
             <div class="leImage">
-              <img src="images/image-1.jpg" alt="Nature" style="width:100%;">
+              <img src="images/image-1.jpg" alt="Nature" style="width:100%;" class="backImg">
               <div class="text-block">
                 <span>Introduction </span>
                 <div class="inner-contant">
@@ -113,23 +115,21 @@
 
           <div class="item">
             <div class="leImage">
-              <img src="images/image-2.jpg" alt="Nature" style="width:100%;">
+              <img src="images/image-2.jpg" alt="Nature" style="width:100%;" class="backImg">
 
               <div class="text-block">
                 <p id="thirdText">
                       The components of the ontology are shown in figure 2. Main classes of the ontology are Variable,  Measure, Model, LinkedVariables and Origin. LinkedVariables class captures a link between any two variables. LinkType is defined to represent details of different links between variables as an extendable catalogue of link types (Causal, InvestigativeCausal, NoLink). Origin class is defined to represent details about the origin or reference to any concept. Main origin types in RVO are: ViaModel, ViaLiterature, and FromExperts.
                       One strength of this ontology is how it can be linked with any domain specific ontology via the operationalized relationship. We can take any concept (thing or property) defined in any third-party ontology as rvo:Concept and link it to a variable. In this way, the context of the variable is readily available through a domain specific ontology.
                 </p>
-                <object class="lepdf" type="application/pdf" data="Materials/rvo_v1-5.pdf?#zoom=85&scrollbar=0&toolbar=0&navpanes=0">
-                <p>Insert your error message here, if the PDF cannot be displayed.</p>
-              </object>
+                <image class="lepdf" src="Materials/rvo.png">
               </div>
             </div>
           </div>
 
           <div class="item">
             <div class="leImage">
-              <img src="images/image-3.jpg" alt="Nature" style="width:100%;">
+              <img src="images/image-3.jpg" alt="Nature" style="width:100%;" class="backImg">
 
               <div class="text-block">
                 <table class="lesdefs">
@@ -189,41 +189,15 @@
 
 <!-- Team Section Start -->
 <section class="team" id="Team">
-        <h4>Download the Onthology you need</h4>
-        <h6>You can choose from several onthology files depending on what you need</h6>
+        <h4>Download Ontology</h4>
+        <h6>Choose the right format</h6>
           <div class="row">
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-                   <a href="blog_single.html"><img src="images/team-1.jpg" class="img-responsive"></a>
-                 <div class="inner-contant">
-                   <h3><a href="blog_single.html">House Price Market</a></h3>
-                   <h5>This onthology concern anything you need to know from the house market</h5>
-                   <p><a href="blog_single.html">+ download</a></p>
-                 </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="500">
-                  <a href="blog_single.html"><img src="images/team-2.jpg" class="img-responsive"></a>
-                <div class="inner-contant">
-                  <h3><a href="blog_single.html">Wedding cake onthology</a></h3>
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting book. t has survived not only fivand the only ise centuries...</h5>
-                  <p><a href="blog_single.html">+ read more</a></p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="1000">
-                  <a href="blog_single.html"><img src="images/team-3.jpg" class="img-responsive"></a>
-                <div class="inner-contant">
-                <h3><a href="blog_single.html">Bush Walking Onthology</a></h3>
-                <h5>Lorem Ipsum is simply dummy text of the printing and typesetting book. t has survived not only fivand the only ise centuries...</h5>
-                <p><a href="blog_single.html">+ read more</a></p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="1500">
-                  <a href="blog_single.html"><img src="images/team-4.jpg" class="img-responsive"></a>
-                <div class="inner-contant">
-                <h3><a href="blog_single.html">Sea Related Injury Onthology</a></h3>
-                <h5>Lorem Ipsum is simply dummy text of the printing and typesetting book. t has survived not only fivand the only ise centuries...</h5>
-                <p><a href="blog_single.html">+ read more</a></p>
-                </div>
-              </div>
+            <div class="inner-contant">
+              <h3>House Price Market Ontology</h3>
+              <p><a href="http://adage2.cse.unsw.edu.au/rvo.owl" download>in RDF/XML format</a></p>
+              <p><a href="http://adage2.cse.unsw.edu.au/rvo.ttl" download>in Turtle format</a></p>
+              <h3><a href="http://adage2.cse.unsw.edu.au/rvo_housepriceprediction_dataset.ttl" download>Dataset for House Price Prediction Variables</a></h3>
+            </div>
           </div>
 </section>
 <!-- Team Ended -->
