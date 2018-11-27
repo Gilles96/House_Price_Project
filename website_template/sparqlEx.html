@@ -38,6 +38,8 @@
           <!-- Google Font and font-awesome -->
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
           <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,300,400,400i,500,500i,600,700,900" rel="stylesheet">
+
+          <link rel="icon"  type="image/png" href="Materials/RVO_logo.png">
                 
           <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
           <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,7 +64,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="images/UNSW_LOGO.png" alt="logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <!-- Nav links -->
@@ -74,7 +76,6 @@
                    <li><a href="sparqlEnd.html">SPARQL EndPoint</a></li>
                    <li class="hidden-xs">|</li>
                    <li><a href="about.html">About us</a></li>
-                   <li class="hidden-xs">|</li>
                 </ul>
             </div>
         </div>
@@ -98,13 +99,49 @@
 <section id="Examples">
 
   <div class="container-fluid">
-    <div class="text-block">
-    <span>Onthology </span>
-    <div class="inner-contant">
-      <p>Those are example queries that you can copy and paste in the SPARQL Endpoint</p>
+    <div class="text-block1">
+      <span>Onthology </span>
+      <div class="inner-contante">
+        <p>Those are example queries that you can copy and paste in the SPARQL Endpoint: </p>
+      </div>
+    </div>
+    <div class="lesPrefix">
+      <div class="text-block2">
+        <p>Copy and Paste those prefixes in your SPARQL Endpoint:</p>
+      </div>
+
+      <div class="social-buttonz">
+        <div class="row">
+          <div class="inner-text1">
+          <h3>PREFIX rdf: &#60;http://www.w3.org/1999/02/22-rdf-syntax-ns#></h3>
+          <h3>PREFIX owl: &#60;http://www.w3.org/2002/07/owl#></h3>
+          <h3>PREFIX rdfs: &#60;http://www.w3.org/2000/01/rdf-schema#></h3>
+          <h3>PREFIX xsd: &#60;http://www.w3.org/2001/XMLSchema#></h3>
+          <h3>PREFIX analytics: &#60;http://www.adage.unsw.edu.au/analytics#> </h3>
+          <h3>PREFIX adage: &#60;http://adage.cse.unsw.edu.au/resource/analytics#> </h3>
+          <h3>PREFIX frbr: &#60;http://purl.org/vocab/frbr/core#> </h3>
+          <h3>PREFIX dcterms: &#60;http://purl.org/dc/terms/></h3>
+          <h3>PREFIX fabio: &#60;http://purl.org/spar/fabio/></h3>
+          <h3>PREFIX foaf: &#60;http://xmlns.com/foaf/0.1/></h3>
+
+        </div>
+      </div>
     </div>
   </div>
-  <div class="FirstTable">
+
+  <div class="social-buttons">
+    <div class="row">
+      <div class="inner-text2">
+        <h3><a href="sparqlEx.html#FirstTable">Explore Links Between Variables Table</a></h3>
+        <h3><a href="sparqlEx.html#LinkVarMeas">Explore Links Between Variable and Measure Table</a></h3>
+        <h3><a href="sparqlEx.html#ExploreConcepts">Explore concepts Table</a></h3>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id ="FirstTable">
     <h3>Explore Links Between Variables</h3>
     <table>
       <caption>Explore Links Between Variables</caption>
@@ -261,7 +298,7 @@
     <br>
     <br>
     
-    <div class="LinkVarMeas">
+    <div id="LinkVarMeas">
       <h3>Explore Links Between Variable and Measure</h3>
       <table class="SecondTable">
         <caption>Explore Links Between Variable and Measure</caption>
@@ -312,7 +349,7 @@
     <br>
     <br>
 
-    <div class="ExploreConcepts">
+    <div id="ExploreConcepts">
       <h3>Explore Concepts</h3>
       <table class="ThirdTable">
        <caption>Explore Concepts</caption>
@@ -321,7 +358,6 @@
          <th>Questions</th>
          <th>SPARQL</th>
        </tr>
-       <div>
        <tr>
          <td>G3.1</td>
          <td>Whats is (are) the concepts (s) which a certain variable represents?</td>
@@ -359,11 +395,11 @@
           }
           </td>
         </tr>
-      </div>
     </table>
     <br>
     <br>  
   </div>
+</div>
 </section>
 <!-- support section Ended -->
 
@@ -378,10 +414,6 @@
                <li><a href="sparqlEnd.html">SPARQL EndPoint</a></li><li class="semicolon">|</li>
                <li><a href="about.html">About Us</a></li>
            </ul>
-           <p>(C) 2017 All rights reserved <span><a href="https://www.template.net/editable/websites/html5" target="_blank" style="color: #b9b203;">ostacor.</a></span>Designed by <span><a href="https://www.template.net/editable/websites/html5" target="_blank" style="color: #03b9b3;">template.net</a></span></p>
-       </div>
-       <div class="footer-logo">
-              <a href="index.html"><img src="images/logo.png" alt="footer-logo"></a>
        </div>
     </div>
     <!-- container Ended-->
