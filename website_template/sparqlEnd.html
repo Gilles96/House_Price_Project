@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
          
-          <title>ostacor</title>
+          <title>RVO</title>
           <!-- bootstrap -->
           <link href="css/bootstrap.min.css" rel="stylesheet">
           <!-- Custom CSS: custom Styles -->
@@ -65,7 +65,7 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/UNSW_LOGO.png" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="Materials/RVO_logo.png" alt="logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <!-- Nav links -->
@@ -104,6 +104,29 @@ footer {background-image: url("images/banner-customers.jpg");background-repeat: 
     var yasgui = YASGUI(document.getElementById("showcase"));
   </script>
 <!-- Support section Ended -->
+
+<section id="API">
+  <div class="APICURL">
+  <div class="API">
+    <h5>REST API to access RVO data</h5>
+    <span>Endpoint:</span><a href="http://adage2.cse.unsw.edu.au:8005/v1/graphs/sparql" target="_blank">http://adage2.cse.unsw.edu.au:8005/v1/graphs/sparql</a>
+    <p>Path Parameter: query=“&lt;URLencodedSPARQLquery&gt;”</p>
+    <p>Authentication (basic):
+      <ul class="bullet">
+        <li>Username: guest</li>
+        <li>Password: guestUNSW</li>
+      </ul>
+    </p>
+  </div>
+  <div class="CURL">
+    <h5>Sample CURL request:</h5>
+    <p>curl --basic --user guest:guestUNSW -i -X GET -H &quot;Accept: application/sparql-
+results+json&quot; http://adage2.cse.unsw.edu.au:8005/v1/graphs/sparql?query=&quot;&lt;URL
+encoded query&gt;&quot;</p>
+
+  </div>
+</div>
+</section>
 
 <!-- Footer section Start -->
 <footer>
