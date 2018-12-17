@@ -135,14 +135,14 @@ a:hover {
 }
 
 .navbar-inverse {
-    background-color: rgba(0, 0, 0, 0.91);
+    background-color: rgba(180, 180, 180, 0.91);
     border: none;
 }
 
 .navbar-brand > img {
-    padding: 7px 0;
-    width: 120px;
-    height: 120px;
+    padding: 1px 0;
+    width: 100px;
+    height: 100px;
 }
 
 .navbar li {
@@ -290,7 +290,8 @@ a:hover {
 .about .text-block #thirdText{
     text-align: left;
     padding-left: 53px;
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom:30px; 
     letter-spacing: 0.5px;
     line-height: 28px;
     font-size: 24px;
@@ -543,13 +544,18 @@ a:hover {
 
 .services .TeamLink {
     text-align: left;
-    left: 3%;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 .TeamLink a{
     font-size: 16px;
-    padding-left: 5px;
+    padding-left: 6px;
+}
+
+.services p {
+    font-size: 16px;
+    font-weight: 350;
+    color: black;
 }
 
 .services h3 {
@@ -565,13 +571,6 @@ a:hover {
     color: black;
     letter-spacing: 3px;
     padding-bottom: 70px;
-    text-transform: uppercase;
-}
-
-.services h5 {
-    font-size: 16px;
-    color: black;
-    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
@@ -1260,39 +1259,33 @@ Examples Section
 #Examples .lesPrefix {
     padding-left: 15px;
     border: 1px solid #c2c2c2;
+    width: 45%;
+
 }
 #Examples .social-buttons{
     border: 1px solid #c2c2c2;
     margin-top: 60px;
     margin-bottom: 60px;
+    width: 850px;
+
 }
 
 #Examples .social-buttonz {
     border: none;
+
     
 }
 #Examples .inner-text1 h3{
     padding-top: 2px;
     letter-spacing: 0.5px;
     color: rgba(0, 0, 0, 0.85);
-    font-size: 25px;
     text-align: left;
     line-height: 16px;
     font-weight: 600;
     text-transform: none;
     font-size: 14px;
-
-}
-#Examples .inner-text span:first-child {
-    color: pink;
-    font-weight: 600;
 }
 
-#Examples .inner-text span:last-child {
-    color: yellow;
-    font-weight: 500;
-    border-bottom: 1px solid gray;
-}
 #Examples h3 {
     color: black;
     font-size: 25px;
@@ -1334,32 +1327,29 @@ Examples Section
 }
 
 #Examples table, th, td{
-    border: 3px solid black;
+    border: 3px solid #80848A;
     padding: 10px;
 }
 #Examples tr:hover{
-    background-color: #6699ff;
+    background-color: #ddd;
 }
 #Examples .text-block1 {
     padding-bottom: 25px;
     padding-left: 43px;
 }
 #Examples .text-block2  {
-    padding-top: 20px;
+    padding-top: 15px;
     letter-spacing: 0.5px;
     color: rgba(0, 0, 0, 0.85);
-    font-size: 25px;
+    font-size: 14px;
     text-align: left;
     line-height: 28px;
     font-weight: 600;
 }
 
-#Examples .inner-contante {
+#Examples .text-block1 {
     padding-left: 53px;
     padding-top: 0;
-}
-#Examples .text-block1 span {
-    color: #ff0000;
     font-size: 36px;
     line-height: 2;
     font-weight: 600;
@@ -1388,9 +1378,6 @@ Examples Section
     padding: 0;
 }
 
-#Examples {
-    width: 100%;
-}
 
 #Examples h4 {
     font-size: 37px;
@@ -1415,11 +1402,6 @@ Examples Section
     letter-spacing: 3px;
     padding-bottom: 70px;
     text-transform: uppercase;
-}
-
-#Examples img {
-    width: 100%;
-    margin-bottom: 30px;
 }
 
 #Examples a {
@@ -1836,6 +1818,55 @@ Blog-page
 #services .heading {
     padding-bottom: 30px;
 }
+
+
+/*========================================================================================*/
+
+/* ----------------
+ API Section 
+---------------- */
+
+#API{
+    padding-top: 40px;
+    padding-left: 15px;
+    height: auto;
+}
+#API .APICURL{
+    border: 1px solid #c2c2c2;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#API .CURL{
+    padding-top: 10px;
+}
+
+#API h5{
+    padding-bottom: 5px;
+    font-size: 22px;
+}
+#API p{
+    font-size: 16px;
+    padding-top: 5px;
+}
+#API span{
+    font-size: 18px;
+}
+#API a{
+    font-size: 16px;
+    padding-left: 6px;
+}
+#API .bullet {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 17px;
+}
+#API .bullet li{
+    padding-top: 5px;
+    margin-left: 25px;
+    text-indent: -19px;
+}
+
+
 
 
 /*========================================================================================*/

@@ -4,12 +4,12 @@
    <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="ostacor">
+    <meta name="description" content="UNSW">
     <meta name="keywords" content="HTML,CSS,JavaScript,jquery">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
          
-          <title>UNSW</title>
+          <title>RVO</title>
           <!-- bootstrap -->
           <link href="css/bootstrap.min.css" rel="stylesheet">
           <!-- Custom CSS: custom Styles -->
@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/UNSW_LOGO.png" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="Materials/RVO_logo.png" alt="logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <!-- Nav links -->
@@ -119,10 +119,15 @@
 
               <div class="text-block">
                 <p id="thirdText">
-                      The components of the ontology are shown in figure 2. Main classes of the ontology are Variable,  Measure, Model, LinkedVariables and Origin. LinkedVariables class captures a link between any two variables. LinkType is defined to represent details of different links between variables as an extendable catalogue of link types (Causal, InvestigativeCausal, NoLink). Origin class is defined to represent details about the origin or reference to any concept. Main origin types in RVO are: ViaModel, ViaLiterature, and FromExperts.
-                      One strength of this ontology is how it can be linked with any domain specific ontology via the operationalized relationship. We can take any concept (thing or property) defined in any third-party ontology as rvo:Concept and link it to a variable. In this way, the context of the variable is readily available through a domain specific ontology.
+                      The components of the ontology are shown in the diagram below. Main classes of the
+                      ontology are Variable, Measure, Model and LinkedVariables. LinkedVariables class
+                      captures a link between any two variables. Details of the classes are defined in the
+                      following table. rvo:origin is an important property defined in RVO to facilitate traceability
+                      of the knowledge and contain three sub-properties. Origin for a certain Variable, Model
+                      or LinkedVariable could come from an expert or a research paper. Additionally, origin of
+                      a LinkedVariable could be a Model as well.
                 </p>
-                <image class="lepdf" src="Materials/rvo.png">
+                <img class="lepdf" src="Materials/rvo_v1-4.png">
               </div>
             </div>
           </div>
@@ -139,46 +144,64 @@
                   </tr>
                   <tr>
                     <td>Concept</td>
-                    <td>Concept or Thing refer to abstraction of any entity which may exist in an ontology.</td>
+                    <td>Concept is used to identify any domain concept that link a variable to a real-world entity. 
+                        This is used to link domain ontologies to RVO and provide context to the variable.</td>
                   </tr>
                   <tr>
                     <td>Variable</td>
-                    <td>Variables exist as metrics to quantify concepts.</td>
+                    <td>Variables exist as metrics to quantify concepts associated with a value and 
+                        whose associated value may be changed.</td>
                   </tr>
                   <tr>
                     <td>Measure</td>
-                    <td>Measures are the metrics that represent actual values for a variables.</td>
+                    <td>Measures are the metrics for observed values for a variables.</td>
                   </tr>
                   <tr>
-                    <td>Variable Link</td>
-                    <td>A link describes a connection between two variables, the nature of this connection and how this connection was established.</td>
+                    <td>LinkedVariables</td>
+                    <td>LinkedVariables class describes a connection between two variables,
+                        the nature of this connection and its origin.</td>
                   </tr>
                   <tr>
                     <td>Origin</td>
-                    <td>Origin is where a concept (e.g. variable, Variable Link, Measure) is first defined or mentioned. RVO has three origins – Expert Person, Reference of a publication, Analytics Model</td>
+                    <td>Origin is where a concept (e.g. variable, LinkType, Measure) is first defined or mentioned. RVO has three origins – Expert Person, Reference of a publication, Analytics Model</td>
                   </tr>
                   <tr>
-                    <td>Link Type</td>
+                    <td>LinkType</td>
                     <td>Link Type describes the type of link that exists between two or more variables. <br>
-                        Example of Link Types are:
+                        Identified Link Types are:
                         <ul>
                           <li>Causal: a variable causes another variable.</li>
-                          <li>Investigative Causal: there is a hypothesis that one variable cause another, the hypothesis needs to be tested.</li>
-                          <li>No link: there are instances that no link can be established between two variables.</li>
+                          <li>Investigative Causal: there is a hypothesis that one variable cause another, the
+                              hypothesis needs to be tested.</li>
+                          <li>NonCausal: Proven not to have a causal relationship between two variables.</li>
+                          <li>Correlated: Two variables are dependence or associated.</li>
+                          <li>Proxy: One variable can be used in place of the other.</li>
                         </ul>
                     </td>
                   </tr>
                   <tr>
                     <td>Data Source</td>
-                    <td>Data source references to the source from which a data is coming from.</td>
+                    <td>Data source refers to a data provider.</td>
                   </tr>
                    <tr>
                     <td>Dataset</td>
-                    <td>Dataset refers to the data file provided by a data source which contain the data for one or multiple measures. We recommend publishing dataset following RDF-Cube structure.</td>
+                    <td>Dataset refers to a collection of observations for a set of measures,
+                              usually stored in a data file.</td>
                   </tr>
               <tr>
                 <td>Data Structure</td>
-                <td>Dataset structure refers to the meta data for a dataset such as what measures are captured, unit of measure.</td>
+                <td>Dataset structure refers to the meta data for understanding a dataset such as what measures
+                    are captured, unit of measure.</td>
+              </tr>
+              <tr>
+                <td>Model</td>
+                <td>The model is composed of a set of variables and a set of equations that establish relationships 
+                    between the variables to describe particular phenomena or a system.</td>
+              </tr>
+              <tr>
+                <td>Model Type</td>
+                <td>Model type class is used to define types of model, (e.g. :- statistical model such as 
+                    logistic regression, Bayesian model etc.)</td>
               </tr>
                 </table>
               </div>
