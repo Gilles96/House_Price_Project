@@ -1323,9 +1323,6 @@ Examples Section
 #Examples table{
     padding: 30px;
     width: flex;
-    color: black;
-    font-weight: 500;
-    background-color: #595E65;
     font-size: 14px;
 }
 
