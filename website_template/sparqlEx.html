@@ -121,6 +121,7 @@
             <h3>PREFIX fabio: &#60;http://purl.org/spar/fabio/></h3>
             <h3>PREFIX foaf: &#60;http://xmlns.com/foaf/0.1/></h3>
             <h3>PREFIX qb: &#60;http://purl.org/linked-data/cube#></h3>
+            <h3>PREFIX dbpedia: &#60;http://dbpedia.org/resource/></h3>
           </div>
         </div>
       </div>
@@ -131,6 +132,7 @@
       <h3><a href="sparqlEx.html#FirstTable">Explore Links Between Variables Table</a></h3>
       <h3><a href="sparqlEx.html#LinkVarMeas">Explore Links Between Variable and Measure Table</a></h3>
       <h3><a href="sparqlEx.html#ExploreConcepts">Explore concepts Table</a></h3>
+      <h3><a href="sparqlEx.html#DomainSpecificSPARQLQueries">Domain Specific SPARQL Queries Table</a></h3>
     </div>
   </div>
 
@@ -390,10 +392,125 @@
           }
           </td>
         </tr>
-    </table>
-    <br>
-    <br>  
+    </table> 
   </div>
+  <br>
+  <br> 
+
+  <div id="DomainSpecificSPARQLQueries">
+      <h3>Domain Specific SPARQL Queries</h3>
+      <table class="SecondTable">
+        <caption>Domain Specific SPARQL Queries</caption>
+        <tr>
+          <th>#</th>
+          <th>Questions</th>
+          <th>SPARQL</th>
+        </tr>
+        <tr>
+          <td>G4.1</td>
+          <td>What are the variables related to housing?</td>
+          <td>SELECT DISTINCT ?var ?label <br>
+                WHERE { ?var rdf:type  analytics:Variable.<br>
+                        ?var rdfs:label   ?label.<br>
+                        ?var analytics:operationalize dbpedia:Housing.<br>          
+                      }
+
+          </td>
+        </tr>
+        <tr>
+          <td>G4.2</td>
+          <td>What are the variables which influence "House Price"?</td>
+          <td>SELECT DISTINCT ?v2 ?v2Lable<br>
+                WHERE { ?variable rdf:type analytics:LinkedVariables.<br>
+                        ?variable analytics:linkType analytics:Causal.<br>
+                        ?variable analytics:firstVariable ?v1.<br>
+                        ?v1 rdfs:label "House Price"^^rdfs:Literal.<br>
+                        ?variable analytics:secondVariable ?v2. <br>
+                        ?v2 rdfs:label ?v2Lable. <br>
+                      }
+
+         </td>
+       </tr>
+       <tr>
+         <td>G4.3</td>
+         <td>Does Unemployment Rate affect house price?</td>
+         <td>SELECT DISTINCT ?variable<br>
+              WHERE { ?variable rdf:type analytics:LinkedVariables.<br>
+                      ?variable analytics:firstVariable ?v1.<br>
+                      ?v1 rdfs:label "House Price"^^rdfs:Literal.<br>
+                      ?variable analytics:secondVariable ?v2. <br>
+                      ?v2 rdfs:label "Unemplyment Rate"^^rdfs:Literal.<br>
+                    }
+
+         </td>
+       </tr>
+       <tr>
+         <td>G4.4</td>
+         <td>Is there a relationship between Age Cohort and House Price?</td>
+         <td>ASK{<br> 
+                ?v1 rdf:type analytics:Variable.<br>
+                ?v1 rdfs:label "House Price"^^rdfs:Literal.<br>
+              <br>
+                ?v2 rdf:type analytics:Variable.<br>
+                ?v2 rdfs:label "Unemplyment Rate"^^rdfs:Literal.<br>
+              <br>
+                ?variable rdf:type analytics:LinkedVariables.<br>
+                {?variable analytics:firstVariable ?v1.<br>
+                ?variable analytics:secondVariable ?v2.}<br>
+                UNION<br>
+                {?variable analytics:firstVariable ?v2.<br>
+                ?variable analytics:secondVariable ?v1.}<br>
+              }
+         </td>
+       </tr>
+       <tr>
+         <td>G4.5</td>
+         <td>What is the title of the paper that define link between housing demand and house price?</td>
+         <td>SELECT DISTINCT ?paperTitle<br>
+              WHERE { ?variable rdf:type analytics:LinkedVariables.<br>
+                      ?variable analytics:firstVariable ?v1.<br>
+                      ?variable analytics:secondVariable ?v2. <br>
+                      {<br>
+                      ?v1 rdfs:label "House Price"^^rdfs:Literal.<br>
+                      ?v2 rdfs:label "Housing Demand"^^rdfs:Literal.}<br>
+                      UNION<br>
+                      {<br>
+                       ?v1 rdfs:label "Housing Demand"^^rdfs:Literal.<br>
+                       ?v2 rdfs:label "House Price"^^rdfs:Literal.}<br>
+                      ?variable analytics:origin ?origin.<br>
+                      ?origin analytics:referenceOfOrigin ?ref.<br>
+                      ?ref frbr:realization ?details.<br>
+                      ?details dcterms:title ?paperTitle<br>
+                    }
+
+         </td>
+       </tr><tr>
+         <td>G4.6</td>
+         <td>What are the measure used for house price variable?</td>
+         <td>SELECT DISTINCT ?measure ?label<br>
+              WHERE { ?var rdfs:label "House Price"^^rdfs:Literal.<br>
+                      ?var rdf:type analytics:Variable.<br>
+                      ?var ?measuredBy ?measure.<br>
+                      ?measure rdfs:label ?label.<br>
+                    }
+
+         </td>
+       </tr><tr>
+         <td>G4.7</td>
+         <td>Who are the researchers who conducted study “The Baby Boom, The Baby Bust, and the Housing Market” ?</td>
+         <td>SELECT DISTINCT ?author ?firstName ?lastName<br>
+              WHERE { ?ref rdf:type fabio:ResearchPaper.<br>
+                      ?ref frbr:realization ?details.<br>
+                      ?details dcterms:title "The Baby Boom, The Baby Bust, and the Housing Market".<br>
+                      ?ref dcterms:creator ?author.<br>
+                       OPTIONAL {?author foaf:givenName ?firstName.}<br>
+                       OPTIONAL {?author foaf:familyName ?lastName.}<br>
+                    }
+
+         </td>
+       </tr>
+     </table>
+    </div>
 </div>
 </section>
 <!-- support section Ended -->
